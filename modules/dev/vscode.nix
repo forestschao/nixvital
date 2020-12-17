@@ -28,8 +28,8 @@ let
     {
       name = "theme-dracula";
       publisher = "dracula-theme";
-      version = "2.19.0";
-      sha256 = "0lgf1a7a8ikvkas4g69w1n5i3s5pabs6d394na2nz0iib490kkw1";
+      version = "2.22.3";
+      sha256 = "0wni9sriin54ci8rly2s68lkfx8rj1cys6mgcizvps9sam6377w6";
     }
     # Syntax highlighting for BUILD files.
     {
