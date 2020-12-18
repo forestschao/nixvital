@@ -10,7 +10,7 @@
     ../modules/vm.nix
     ../modules/dev/python-environment.nix
     ../modules/dev/vscode.nix
-    # ../modules/dev/vim.nix
+    ../modules/dev/vim.nix
   ];
 
   vital.machineType = "desktop";
