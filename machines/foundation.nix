@@ -46,38 +46,24 @@
 
   vital.dev.python = {
     batteries = {
-      machineLearning = false;
+      machineLearning = true;
     };
   };
 
   environment.systemPackages = with pkgs; [
     darktable axel gimp pass
-    oh-my-zsh
+    zsh oh-my-zsh
   ];
 
-  programs.zsh.enable = true;
-  programs.zsh.interactiveShellInit = ''
-    export ZSH=${pkgs.oh-my-zsh}/share/oh-my-zsh/
+  programs.zsh = {
+    enable = true;
+    autosuggestions.enable = true;
+    syntaxHighlighting.enable = true;
+    promptInit = "";
 
-    # Customize your oh-my-zsh options here
-    ZSH_THEME="Agnoster"
-
-    HISTFILESIZE=500000
-    HISTSIZE=500000
-    setopt SHARE_HISTORY
-    setopt HIST_IGNORE_ALL_DUPS
-    setopt HIST_IGNORE_DUPS
-    setopt INC_APPEND_HISTORY
-    autoload -U compinit && compinit
-    unsetopt menu_complete
-    setopt completealiases
-
-    if [ -f ~/.aliases ]; then
-      source ~/.aliases
-    fi
-
-    source $ZSH/oh-my-zsh.sh
-  '';
+    ohMyZsh.enable = true;
+    ohMyZsh.theme = "robbyrussell";
+  };
 
   users.extraUsers = {
     "chao" = {
