@@ -8,7 +8,7 @@
       vimAlias = true;
       configure = {
         packages.myPlugins = with pkgs.vimPlugins; {
-          start = [ vim-lastplace vim-nix YouCompleteMe 
+          start = [ vim-lastplace vim-nix
                     vim-airline vim-airline-themes
                     vim-colors-solarized
                     vim-clang-format
@@ -37,6 +37,7 @@
           " Turnoff the highlight
           nnoremap \\ :noh<return>
 
+          " Solarized-dark colorscheme
           let g:solarized_termcolors=256
           set t_Co=256
           syntax enable
