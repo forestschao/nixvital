@@ -45,6 +45,13 @@ let
       version = "0.3.0";
       sha256 = "0rlja1hn2n6fyq673qskz2a69rz8b0i5g5flyxm5sfi8bcz8ms05";
     }
+    # Vim
+    {
+      name = "vim";
+      publisher = "vscodevim";
+      version  = "1.18.5";
+      sha256 = "0cbmmhkbr4f1afk443sgdihp2q5zkzchbr2yhp7bm5qnv7xdv5l4";
+    }
   ];
   
   customized-vscode = pkgs.vscode-with-extensions.override {
