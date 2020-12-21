@@ -11,7 +11,7 @@
           start = [ vim-lastplace vim-nix
                     vim-airline vim-airline-themes
                     vim-colors-solarized
-                    vim-clang-format
+                    vim-autoformat
                   ];
           opt = [];
         };
