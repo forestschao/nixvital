@@ -52,8 +52,10 @@
 
   environment.systemPackages = with pkgs; [
     darktable axel gimp pass
-    zsh oh-my-zsh go_bootstrap
+    zsh oh-my-zsh go
   ];
+
+  #environment.variables = { GOROOT = [ "${pkgs.go.out}/share/go" ]; };
 
   programs.zsh = {
     enable = true;
