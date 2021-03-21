@@ -52,7 +52,7 @@
 
   environment.systemPackages = with pkgs; [
     darktable axel gimp pass
-    zsh oh-my-zsh
+    zsh oh-my-zsh go_bootstrap
   ];
 
   programs.zsh = {
@@ -71,4 +71,8 @@
       useDefaultShell = false;
     };
   };
+
+  systemd.extraConfig = ''
+    DefaultLimitNOFILE=infinity
+  '';
 }
