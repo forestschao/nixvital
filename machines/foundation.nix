@@ -11,6 +11,7 @@
     ../modules/dev/python-environment.nix
     ../modules/dev/vscode.nix
     ../modules/dev/vim.nix
+    ../modules/services/chia-blockchain.nix
   ];
 
   vital.machineType = "desktop";
@@ -48,6 +49,10 @@
     batteries = {
       machineLearning = true;
     };
+  };
+
+  vital.services.chia-blockchain = {
+    enable = true;
   };
 
   environment.systemPackages = with pkgs; [
